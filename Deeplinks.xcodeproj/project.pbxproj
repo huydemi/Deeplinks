@@ -75,6 +75,7 @@
 				6B15615A211B30E6006A7476 /* DeeplinkNavigator.swift */,
 				6B15615C211B3345006A7476 /* ShortcutParser.swift */,
 				6B15615E211B3C6D006A7476 /* DeeplinkParser.swift */,
+				6B156161211B41C3006A7476 /* NotificationParser.swift */,
 			);
 			path = Deeplinks;
 			sourceTree = "<group>";
@@ -107,7 +108,6 @@
 				6B156141211B2130006A7476 /* AppDelegate.swift */,
 				6B15614D211B2133006A7476 /* Info.plist */,
 				6B156148211B2133006A7476 /* Assets.xcassets */,
-				6B156161211B41C3006A7476 /* NotificationParser.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
