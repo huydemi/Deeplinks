@@ -30,6 +30,7 @@ class ViewController: UIViewController {
   
   func configureFor(profileType: ProfileType) {
     title = profileType.rawValue
+    ShortcutParser.shared.registerShortcuts(for: profileType)
   }
   
 }

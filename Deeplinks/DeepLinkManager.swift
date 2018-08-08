@@ -36,4 +36,11 @@ class DeepLinkManager {
     // reset deeplink after handling
     self.deeplinkType = nil // (1)
   }
+  
+  @discardableResult
+  func handleShortcut(item: UIApplicationShortcutItem) -> Bool {
+    deeplinkType = ShortcutParser.shared.handleShortcut(item)
+    return deeplinkType != nil
+  }
+  
 }

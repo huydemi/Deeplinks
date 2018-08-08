@@ -23,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // handle any deeplink
     Deeplinker.checkDeepLink()
   }
+  
+  func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+    completionHandler(Deeplinker.handleShortcut(item: shortcutItem))
+  }
 
 }
 
