@@ -16,6 +16,7 @@
 		6B15615B211B30E6006A7476 /* DeeplinkNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B15615A211B30E6006A7476 /* DeeplinkNavigator.swift */; };
 		6B15615D211B3345006A7476 /* ShortcutParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B15615C211B3345006A7476 /* ShortcutParser.swift */; };
 		6B15615F211B3C6D006A7476 /* DeeplinkParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B15615E211B3C6D006A7476 /* DeeplinkParser.swift */; };
+		6B156162211B41C3006A7476 /* NotificationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B156161211B41C3006A7476 /* NotificationParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		6B15615A211B30E6006A7476 /* DeeplinkNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkNavigator.swift; sourceTree = "<group>"; };
 		6B15615C211B3345006A7476 /* ShortcutParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutParser.swift; sourceTree = "<group>"; };
 		6B15615E211B3C6D006A7476 /* DeeplinkParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeeplinkParser.swift; sourceTree = "<group>"; };
+		6B156160211B412A006A7476 /* Deeplinks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Deeplinks.entitlements; sourceTree = "<group>"; };
+		6B156161211B41C3006A7476 /* NotificationParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 		6B156140211B2130006A7476 /* Deeplinks */ = {
 			isa = PBXGroup;
 			children = (
+				6B156160211B412A006A7476 /* Deeplinks.entitlements */,
 				6B156157211B2EE0006A7476 /* Storyboards */,
 				6B156153211B2EA7006A7476 /* Models */,
 				6B156154211B2EB6006A7476 /* Views */,
@@ -103,6 +107,7 @@
 				6B156141211B2130006A7476 /* AppDelegate.swift */,
 				6B15614D211B2133006A7476 /* Info.plist */,
 				6B156148211B2133006A7476 /* Assets.xcassets */,
+				6B156161211B41C3006A7476 /* NotificationParser.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -148,6 +153,11 @@
 				TargetAttributes = {
 					6B15613D211B2130006A7476 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -187,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B156162211B41C3006A7476 /* NotificationParser.swift in Sources */,
 				6B156144211B2130006A7476 /* ViewController.swift in Sources */,
 				6B15615D211B3345006A7476 /* ShortcutParser.swift in Sources */,
 				6B15615F211B3C6D006A7476 /* DeeplinkParser.swift in Sources */,
@@ -336,6 +347,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Deeplinks/Deeplinks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AA388QFS75;
 				INFOPLIST_FILE = "$(SRCROOT)/Deeplinks/SupportingFiles/Info.plist";
@@ -354,6 +366,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Deeplinks/Deeplinks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AA388QFS75;
 				INFOPLIST_FILE = "$(SRCROOT)/Deeplinks/SupportingFiles/Info.plist";

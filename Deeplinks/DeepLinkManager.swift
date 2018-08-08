@@ -49,4 +49,8 @@ class DeepLinkManager {
     return deeplinkType != nil
   }
   
+  func handleRemoteNotification(_ notification: [AnyHashable: Any]) {
+    deeplinkType = NotificationParser.shared.handleNotification(notification)
+  }
+  
 }
